@@ -1,22 +1,24 @@
 import React, { useEffect, useState, useRef } from "react";
 
-// if you're using solution-1 then uncomment line 4-5
+// Solution-1 start
 // import { CKEditor } from "@ckeditor/ckeditor5-react";
 // import ClassicEditor from "@ckeditor/ckeditor5-build-classic";
+// --- end
 
 function Editor() {
-  // if you're using solution-1 then comment line 8-9
+  // Solution-2 start
   let editorRef = useRef();
   const { CKEditor, ClassicEditor } = editorRef.current || {};
-
+  // --- end
   let [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
-    // if you're using solution-1 then comment line 16-19
+    // Solution-2 start
     editorRef.current = {
       CKEditor: require("@ckeditor/ckeditor5-react").CKEditor, // v3+
       ClassicEditor: require("@ckeditor/ckeditor5-build-classic"),
     };
+    // --- end
 
     setLoaded(true);
   }, []); // run on mounting

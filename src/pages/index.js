@@ -2,13 +2,15 @@ import Head from 'next/head'
 import dynamic from 'next/dynamic'
 import styles from '../styles/Home.module.css'
 
-// if you're using solution-1 then comment line 6
+// solution-2 start
 import Editor from '../components/Editor'
+// --- end
 
-// if you're using solution-1 then uncomment line 8-10
+// Solution-1 start
 // var Editor = dynamic(() => import("../components/Editor"), {
 //   ssr: false
 // })
+// --- end
 
 export default function Home() {
   return (
